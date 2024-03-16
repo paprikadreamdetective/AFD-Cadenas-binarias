@@ -3,7 +3,7 @@ from FSM import FiniteStateMachine
 def isEven(fsm, initState, finalState, string):
     currentState = initState
     for symbol in string:
-       nextState = AFD.getState(currentState, symbol)
+       nextState = fsm.getState(currentState, symbol)
        currentState = nextState
     acceptedState = currentState
     if acceptedState == finalState:
